@@ -1,17 +1,6 @@
-terraform {
-  backend "s3" {
-    bucket                  = "carlsberg-tf-states"
-    key                     = "infra/aws/carlsberg-dev-4834-5903-6065/acc-gbs-cxproject-dev-01-app-01/dev/lambda-python-with-terraform/lambda/state.tf"
-    region                  = "eu-west-1"
-    shared_credentials_file = "~/.aws/credentials"
-    profile                 = "cx-tf-states"
-  }
-}
 
 provider "aws" {
   region                    = "eu-west-1"
-  shared_credentials_file   = "~/.aws/credentials"
-  profile                   = "Carlsberg-Dev"
 }
 
 module "aws_lambda_function" {
