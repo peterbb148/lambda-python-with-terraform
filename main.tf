@@ -1,3 +1,13 @@
+terraform {
+ backend "remote" {
+   organization = "peterbb"
+
+   workspaces {
+     name = "lambda-python-with-terraform"
+   }
+ }
+}
+
 provider "aws" {
   region                    = "eu-west-1"
 }
