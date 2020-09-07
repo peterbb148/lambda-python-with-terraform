@@ -13,6 +13,7 @@ variable tags {}
 variable vpc_config {}
 variable environment_vars {}
 variable env {}
+variable region {}
 
 variable tracing_config {}
 
